@@ -1,0 +1,57 @@
+/* Barra de navegación principal */
+.navbar {
+  background-color: #03328e; /* Azul marino exacto extraído del logo CCA */
+  padding: 0.5rem 2.5rem;    /* Reduce el espacio vertical y da más aire a los lados */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;       /* Centra perfectamente el logo y los textos verticalmente */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  height: 70px;              /* Fijamos una altura estándar de barra profesional */
+}
+
+/* Contenedor del Logo */
+.navbar-logo a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* Control del tamaño de la imagen */
+.logo-img {
+  height: 55px;             /* Escalamos el logo a un tamaño prudente y legible */
+  width: auto;              /* Mantiene la proporción original sin estirarse */
+  border-radius: 4px;       /* Suaviza las esquinas del recuadro blanco */
+  object-fit: contain;
+}
+
+/* Contenedor de las opciones de la derecha */
+.navbar-opciones {
+  display: flex;
+  gap: 10px;                /* Espaciado controlado entre botones */
+  align-items: center;
+}
+
+/* Enlaces de las opciones */
+.navbar-opciones a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;          /* Incrementa el tamaño de la letra para que sea legible */
+  font-weight: 600;
+  padding: 10px 22px;       /* Botones más robustos y estéticos */
+  border-radius: 6px;
+  transition: all 0.25s ease;
+}
+
+/* Hover: Fondo sutil al pasar el cursor */
+.navbar-opciones a:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Botón activo (Inicio) */
+.navbar-opciones a.activo {
+  color: #03328e;           /* Texto con el azul oscuro institucional */
+  background-color: #f7ca16; /* El amarillo dorado exacto de la 'A' de CCA */
+  font-weight: 700;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
