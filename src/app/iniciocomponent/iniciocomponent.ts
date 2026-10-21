@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   imports: [],
@@ -6,4 +7,18 @@ import { Component } from '@angular/core';
   styleUrl: './iniciocomponent.css',
   templateUrl: './iniciocomponent.html',
 })
-export class Iniciocomponent {}
+export class Iniciocomponent {
+  constructor(private router: Router) {}
+
+  irAnosotros(): void {
+    this.router.navigate(['/nosotros']);
+  }
+
+  irAContactos(): void {
+    this.router.navigate(['/contacto']);
+  }
+
+  volver(): void {
+    this.router.navigate(['/']);
+  }
+}

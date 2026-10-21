@@ -1,1 +1,87 @@
-<p>nosotroscomponent works!</p>
+<div class="nosotros-container">
+  
+  <!-- Sección de Encabezado (Hero) -->
+  <section class="hero-section text-center py-5 bg-light">
+    <div class="container">
+      <h1 class="display-4 fw-bold text-primary">{{ tituloPrincipal }}</h1>
+      <p class="lead text-muted">Conoce nuestra historia, el legado salesiano y el equipo que guía a nuestra comunidad.</p>
+    </div>
+  </section>
+
+  <!-- Historia y Pilares Salesianos -->
+  <section class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h2 class="h3 fw-bold mb-3">Nuestra Historia y Legado</h2>
+        <p class="text-secondary">{{ historiaTexto }}</p>
+        <p class="text-secondary">Buscamos no solo formar buenos profesionales, sino también "honrados ciudadanos y buenos cristianos", creando un ambiente de familia donde cada estudiante se sienta seguro y motivado.</p>
+      </div>
+      <div class="col-lg-6">
+        <div class="card shadow-sm border-0 bg-primary text-white p-4">
+          <h3 class="h4 fw-bold mb-3">Pilares del Sistema Preventivo</h3>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><strong>Razón:</strong> El diálogo y la convicción como base de la disciplina.</li>
+            <li class="mb-2"><strong>Religión:</strong> El cultivo de la espiritualidad y los valores cristianos.</li>
+            <li><strong>Amabilidad:</strong> El afecto demostrado y correspondido en un clima de hogar.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Misión y Visión -->
+  <section class="bg-white py-5 border-top border-bottom">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="p-4 border rounded shadow-sm h-100">
+            <h3 class="text-primary fw-bold mb-3">Misión</h3>
+            <p class="text-muted">Brindar una educación integral y de calidad a niños y jóvenes, basada en el carisma de Don Bosco, promoviendo el desarrollo académico, humano y cristiano en un ambiente de familia.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="p-4 border rounded shadow-sm h-100">
+            <h3 class="text-primary fw-bold mb-3">Visión</h3>
+            <p class="text-muted">Ser una institución educativa líder y referente en la formación de líderes con valores sólidos, excelencia académica y un firme compromiso social con la comunidad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plantel Directivo (Renderizado dinámico con *ngFor) -->
+  <section class="container my-5">
+    <h2 class="text-center fw-bold mb-4">Nuestro Plantel Directivo</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let miembro of plantelDirectivo">
+        <div class="card h-100 shadow-sm text-center border-0 p-3">
+          <div class="card-body">
+            <div class="mb-3">
+              <div class="rounded-circle bg-secondary text-white d-inline-flex align-items-center justify-content-center mx-auto" style="width: 70px; height: 70px;">
+                <span class="fs-4 fw-bold">{{ miembro.nombre.charAt(0) }}</span>
+              </div>
+            </div>
+            <h4 class="card-title h5 fw-bold">{{ miembro.nombre }}</h4>
+            <h6 class="card-subtitle mb-2 text-primary">{{ miembro.cargo }}</h6>
+            <p class="card-text text-muted small mt-2">{{ miembro.descripcion }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valores Institucionales -->
+  <section class="bg-light py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">Valores Que Nos Identifican</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-3 col-sm-6 mb-3" *ngFor="let valor of valores">
+          <div class="p-3 bg-white rounded shadow-sm border-0 h-100 d-flex align-items-center justify-content-center">
+            <span class="fw-semibold text-dark">{{ valor }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
