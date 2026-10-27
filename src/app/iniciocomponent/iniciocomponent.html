@@ -1,8 +1,93 @@
-<section class="hero-container">
-    <div class="hero-content">
-        <h1>Bienvenido al Colegio Don Bosco</h1>
-        <h3>Un lugar donde el conocimiento se transforma en éxito</h3>
-        <p>Conoce nuestra institución y descubre cómo podemos ayudarte a alcanzar tus metas académicas y profesionales.</p>
-        <button class="btn-primary" type="button" (click)="irAnosotros()">Nosotros</button>
+<section class="home-hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow"><span></span> Comunidad educativa salesiana</p>
+      <h1>Educamos con el corazón. <em>Inspiramos para la vida.</em></h1>
+      <p class="hero-description">
+        En el Colegio Don Bosco, cada estudiante encuentra una comunidad que acompaña su aprendizaje,
+        fortalece sus valores y le anima a construir un futuro con propósito.
+      </p>
+      <div class="hero-actions">
+        <button class="button button-gold" type="button" (click)="irAnosotros()">
+          Conoce nuestro colegio <span aria-hidden="true">→</span>
+        </button>
+        <a class="text-link" routerLink="/historia">Descubre nuestra historia</a>
+      </div>
+      <div class="hero-note">
+        <span class="note-rule"></span>
+        <span>Una educación integral inspirada en Don Bosco</span>
+      </div>
     </div>
+
+    <div class="hero-art">
+      <div class="art-frame">
+        <img src="assets/donBosco.jpg" alt="Retrato de San Juan Bosco" />
+      </div>
+      <div class="art-caption">
+        <span class="caption-mark" aria-hidden="true">“</span>
+        <span>Educar es cosa del corazón.</span>
+      </div>
+      <div class="art-stamp" aria-hidden="true">
+        <span>SALESIANOS</span>
+        <strong>DB</strong>
+        <span>EDUCACIÓN</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-bottom">
+    <span>Aprender</span><span class="bottom-dot"></span>
+    <span>Crecer</span><span class="bottom-dot"></span>
+    <span>Servir</span>
+  </div>
+</section>
+
+<section class="welcome-section">
+  <div class="section-heading">
+    <p class="eyebrow"><span></span> Bienvenidos a casa</p>
+    <h2>Un colegio para <em>crecer en todo sentido.</em></h2>
+    <p>Creemos que educar es acompañar a cada persona para que descubra sus talentos y los ponga al servicio de los demás.</p>
+  </div>
+
+  <div class="values-grid">
+    <article class="value-card">
+      <span class="value-number">01</span>
+      <div class="value-icon" aria-hidden="true">✦</div>
+      <h3>Razón</h3>
+      <p>Fomentamos el pensamiento, el diálogo y el deseo de aprender cada día.</p>
+    </article>
+    <article class="value-card value-card-featured">
+      <span class="value-number">02</span>
+      <div class="value-icon" aria-hidden="true">♡</div>
+      <h3>Amabilidad</h3>
+      <p>Construimos un ambiente cercano, alegre y respetuoso, donde todos se sienten parte.</p>
+    </article>
+    <article class="value-card">
+      <span class="value-number">03</span>
+      <div class="value-icon" aria-hidden="true">✧</div>
+      <h3>Espiritualidad</h3>
+      <p>Educamos en valores y ayudamos a cada estudiante a encontrar sentido y propósito.</p>
+    </article>
+  </div>
+</section>
+
+<section class="legacy-section">
+  <div class="legacy-image">
+    <img src="assets/donBosco.jpg" alt="San Juan Bosco, referente de la educación salesiana" />
+    <span class="image-label">Un legado que nos inspira</span>
+  </div>
+  <div class="legacy-copy">
+    <p class="eyebrow"><span></span> Nuestra identidad</p>
+    <h2>La educación que deja huella nace de la <em>confianza.</em></h2>
+    <p>Seguimos el camino de Don Bosco: estar cerca de los jóvenes, escucharles y ayudarles a desarrollar lo mejor de sí mismos.</p>
+    <a class="underlined-link" routerLink="/historia">Conoce nuestra historia <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<section class="invitation-section">
+  <div>
+    <p class="eyebrow"><span></span> Conoce nuestra comunidad</p>
+    <h2>El futuro se construye <em>juntos.</em></h2>
+    <p>Te invitamos a conocer nuestra historia, nuestros valores y la propuesta educativa que nos une.</p>
+  </div>
+  <a class="button button-light" routerLink="/nosotros">Conócenos <span aria-hidden="true">→</span></a>
 </section>

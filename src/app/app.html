@@ -1,18 +1,44 @@
-<nav class="navbar">
-  <div class="navbar-logo">
-    <a routerLink="/" title="Ir a inicio">
-      <img src="assets/donBosco.jpg" alt="Logo del colegio" class="logo-img"/>
-    </a>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="topbar">
+    <span>Educación con valores, para toda la vida</span>
+    <span class="topbar-mark">Tradición salesiana · Formación integral</span>
   </div>
 
-  <div class="navbar-opciones">
-    <a routerLink="/" routerLinkActive="activo" [routerLinkActiveOptions]="{ exact: true }" >Inicio</a>
-    <a routerLink="historia" routerLinkActive="activo" >Historia</a>
-    <a routerLink="publicaciones" routerLinkActive="activo">Publicaciones</a>
-    <a routerLink="nosotros" routerLinkActive="activo">Nosotros</a>
-  </div>
-</nav>
-<!-- enrutador -->
- <div class="contenedor-principal">
+  <nav class="navbar" aria-label="Navegación principal">
+    <a class="brand" routerLink="/" aria-label="Colegio Don Bosco, ir al inicio">
+      <img src="assets/donBosco.jpg" alt="" class="logo-img"/>
+      <span class="brand-copy">
+        <strong>Colegio Don Bosco</strong>
+        <small>Formando buenos cristianos y honrados ciudadanos</small>
+      </span>
+    </a>
+
+    <div class="navbar-opciones">
+      <a routerLink="/" routerLinkActive="activo" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+      <a routerLink="historia" routerLinkActive="activo">Nuestra historia</a>
+      <a routerLink="publicaciones" routerLinkActive="activo">Novedades</a>
+      <a routerLink="nosotros" routerLinkActive="activo">Nosotros</a>
+    </div>
+  </nav>
+</header>
+
+<main id="contenido" class="contenedor-principal">
   <router-outlet></router-outlet>
- </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-main">
+    <a class="footer-brand" routerLink="/">
+      <img src="assets/donBosco.jpg" alt="" />
+      <span><strong>Colegio Don Bosco</strong><small>Educar con el corazón</small></span>
+    </a>
+    <p>Una comunidad educativa inspirada en el legado de San Juan Bosco y comprometida con la formación integral de cada estudiante.</p>
+    <a class="footer-link" routerLink="/nosotros">Conoce nuestra propuesta <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="footer-bottom">
+    <span>© {{ currentYear }} Colegio Don Bosco</span>
+    <span>Razón · Religión · Amabilidad</span>
+  </div>
+</footer>

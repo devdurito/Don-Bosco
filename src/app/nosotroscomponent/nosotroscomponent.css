@@ -1,10 +1,10 @@
 /* Variables de color y fuentes generales */
 :host {
-  --primary-color: #0d6efd;
-  --primary-dark: #0a58ca;
-  --secondary-color: #6c757d;
-  --bg-light: #f8f9fa;
-  --text-color: #212529;
+  --primary-color: var(--color-navy);
+  --primary-dark: #0c2743;
+  --secondary-color: var(--color-muted);
+  --bg-light: var(--color-cream);
+  --text-color: var(--color-ink);
   --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   display: block;
@@ -149,4 +149,5 @@
 }
 
 .h-100 {
-  height: 100
+  height: 100%;
+}

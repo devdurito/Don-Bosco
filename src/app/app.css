@@ -1,57 +1,243 @@
-/* Barra de navegación principal */
-.navbar {
-  background-color: #03328e; /* Azul marino exacto extraído del logo CCA */
-  padding: 0.5rem 2.5rem;    /* Reduce el espacio vertical y da más aire a los lados */
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 10;
+  top: -4rem;
+  left: 1rem;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  background: var(--color-navy);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+.site-header {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(18, 38, 63, 0.08);
+}
+
+.topbar {
+  min-height: 34px;
+  padding: 0.45rem max(5vw, calc((100% - 1180px) / 2));
   display: flex;
   justify-content: space-between;
-  align-items: center;       /* Centra perfectamente el logo y los textos verticalmente */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  height: 70px;              /* Fijamos una altura estándar de barra profesional */
-}
-
-/* Contenedor del Logo */
-.navbar-logo a {
-  display: flex;
   align-items: center;
-  height: 100%;
+  gap: 1rem;
+  color: #fff;
+  background: var(--color-navy);
+  font-size: 0.73rem;
+  letter-spacing: 0.04em;
 }
 
-/* Control del tamaño de la imagen */
+.topbar-mark {
+  color: #f5d875;
+}
+
+.navbar {
+  width: min(1180px, 90%);
+  min-height: 88px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.brand,
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--color-navy);
+  text-decoration: none;
+}
+
 .logo-img {
-  height: 55px;             /* Escalamos el logo a un tamaño prudente y legible */
-  width: auto;              /* Mantiene la proporción original sin estirarse */
-  border-radius: 4px;       /* Suaviza las esquinas del recuadro blanco */
-  object-fit: contain;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #f1e7ca;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 26%;
 }
 
-/* Contenedor de las opciones de la derecha */
+.brand-copy,
+.footer-brand span {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.brand-copy strong,
+.footer-brand strong {
+  font-family: var(--font-display);
+  font-size: 1.16rem;
+  line-height: 1.1;
+}
+
+.brand-copy small,
+.footer-brand small {
+  color: var(--color-muted);
+  font-size: 0.68rem;
+}
+
 .navbar-opciones {
   display: flex;
-  gap: 10px;                /* Espaciado controlado entre botones */
   align-items: center;
+  gap: 0.35rem;
 }
 
-/* Enlaces de las opciones */
 .navbar-opciones a {
-  color: #ffffff;
+  padding: 0.7rem 0.9rem;
+  border-radius: 999px;
+  color: #4a5564;
+  font-size: 0.88rem;
+  font-weight: 650;
   text-decoration: none;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1rem;          /* Incrementa el tamaño de la letra para que sea legible */
-  font-weight: 600;
-  padding: 10px 22px;       /* Botones más robustos y estéticos */
-  border-radius: 6px;
-  transition: all 0.25s ease;
+  transition: color 160ms ease, background 160ms ease;
 }
 
-/* Hover: Fondo sutil al pasar el cursor */
-.navbar-opciones a:hover {
-  background-color: rgba(255, 255, 255, 0.12);
-}
-
-/* Botón activo (Inicio) */
+.navbar-opciones a:hover,
 .navbar-opciones a.activo {
-  color: #03328e;           /* Texto con el azul oscuro institucional */
-  background-color: #f7ca16; /* El amarillo dorado exacto de la 'A' de CCA */
+  color: var(--color-navy);
+  background: #f4f0e5;
+}
+
+.navbar-opciones a:last-child {
+  margin-left: 0.35rem;
+  color: #fff;
+  background: var(--color-navy);
+}
+
+.navbar-opciones a:last-child:hover,
+.navbar-opciones a:last-child.activo {
+  color: var(--color-navy);
+  background: var(--color-gold);
+}
+
+.contenedor-principal {
+  min-height: 58vh;
+}
+
+.site-footer {
+  color: #fff;
+  background: #102947;
+}
+
+.footer-main,
+.footer-bottom {
+  width: min(1180px, 90%);
+  margin: 0 auto;
+}
+
+.footer-main {
+  padding: 3.2rem 0 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr auto;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.footer-brand {
+  color: #fff;
+}
+
+.footer-brand img {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 26%;
+}
+
+.footer-brand small,
+.footer-main p {
+  color: #c1ccda;
+}
+
+.footer-main p {
+  max-width: 430px;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.footer-link {
+  color: #f5d875;
+  font-size: 0.85rem;
   font-weight: 700;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  text-decoration: none;
+}
+
+.footer-link span {
+  margin-left: 0.35rem;
+}
+
+.footer-bottom {
+  min-height: 58px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  color: #c1ccda;
+  font-size: 0.76rem;
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .topbar-mark {
+    display: none;
+  }
+
+  .navbar {
+    width: min(100% - 2rem, 600px);
+    padding: 0.9rem 0 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .navbar-opciones {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+  }
+
+  .navbar-opciones a {
+    padding: 0.55rem 0.75rem;
+    font-size: 0.82rem;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 2.5rem 0 2rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar-opciones a {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.76rem;
+  }
+
+  .footer-bottom {
+    padding: 1rem 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
